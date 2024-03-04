@@ -1,0 +1,62 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+  }
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    background: gainsboro;
+    width: 100%;
+}
+
+.header {
+   background: #6caef8;
+   text-align: center;
+   color: white;
+   display: flex;
+   flex-direction: row;
+   padding: 10px;
+}
+
+.nav {
+    margin: auto 0 auto auto;
+    font-size: 20px;
+}
+
+.section-titles {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.section-title {
+    flex-shrink: 0;
+}
+
+section {
+    height: 600px;
+    width: 100%;
+}
+
+.sec-main {
+    background: #9cd0e6;
+}
+
+.sec-other {
+    background: #a7e0c4;
+}
+
+footer {
+    background: #6caef8;
+    text-align: center;
+    color: white;
+}
