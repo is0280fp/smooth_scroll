@@ -28,7 +28,6 @@ main {
 
 .nav {
     margin: auto 0 auto auto;
-    font-size: 20px;
 }
 
 .section-titles {
@@ -36,6 +35,12 @@ main {
     display: flex;
     flex-direction: row;
     gap: 30px;
+}
+
+.section-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
 
 .section-title {

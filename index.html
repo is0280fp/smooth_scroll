@@ -7,31 +7,34 @@
     <title>スクロールアニメーション</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="top">
         <h1 class="logo">LOGO</h1>
         <nav class="nav">
             <ul class="section-titles">
-                <li class="section-title">セクション１</li>
-                <li class="section-title">セクション２</li>
-                <li class="section-title">セクション３</li>
+                <li class="section-title"><a class="section-link" href="#sec-1">セクション１</a></li>
+                <li class="section-title"><a class="section-link" href="#sec-2">セクション２</a></li>
+                <li class="section-title"><a class="section-link" href="#sec-3">セクション３</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="sec-main">
-            <h2>一番目のビュー</h2>
-            <p>セクション１</p>
+        <section class="sec-main" id="sec-1">
+            <h2>セクション１</h2>
+            <p>セクション１の内容</p>
         </section>
-        <section class="sec-other">
-            <h2>二番目のビュー</h2>
-            <p>セクション２</p>
+        <section class="sec-other" id="sec-2">
+            <h2>セクション２</h2>
+            <p>セクション２の内容</p>
         </section>
-        <section class="sec-other">
-            <h2>三番目のビュー</h2>
-            <p>セクション３</p>
+        <section class="sec-other" id="sec-3">
+            <h2>セクション３</h2>
+            <p>セクション３の内容</p>
         </section>
     </main>
-    <footer>XOXO</footer>
+    <footer>
+        <a href="#top">Topへ戻る</a>
+        <p>XOXO</p>
+    </footer>
     <!-- Your content goes here -->
     <script type='text/javascript' src="index.js"></script>
 </body>
