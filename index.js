@@ -1,16 +1,13 @@
-const headerHeight = document.querySelector("header").offsetHeight
-
 for (const link of document.querySelectorAll('a[href*="#"]')) {
     link.addEventListener("click", (e) => {
         const hash = e.currentTarget.hash
-        const target = document.getElementById(hash.slice(1))
-        console.log(target)
+        const target = document.getElementById(hash)
 
         // go to top
         if (!hash || hash === "#top") {
             e.preventDefault()
             window.scrollTo({
-                top: headerHeight,
+                top: 0,
                 behavior: "smooth"
             })
         }
@@ -18,7 +15,7 @@ for (const link of document.querySelectorAll('a[href*="#"]')) {
         else if (target) {
             e.preventDefault()
             window.scrollTo({
-                top: target.getBoundingClientRect().top + window.scrollY - headerHeight,
+                top: target.getBoundingClientRect().top + window.scrollY,
                 behavior: "smooth"
             })
         }
@@ -26,4 +23,23 @@ for (const link of document.querySelectorAll('a[href*="#"]')) {
         // URLにハッシュを含める
         history.pushState(null, '', hash);
     })
+}
+
+const urlHash = window.location.hash
+if (urlHash) {
+    console.log(urlHash)
+    const target = document.getElementById(urlHash.slice(1))
+    if (target) {
+        history.replaceState(null, '', window.location.pathname)
+        window.scrollTo(0, 0)
+
+        window.addEventListener("load", () => {
+            const position = target.getBoundingClientRect.top + window.scrollY
+            window.scrollTo({
+                top: position,
+                behavior: "smooth"
+            })
+            history.replaceState(null, '', window.location.pathname + urlHash)
+        })
+    }
 }
